@@ -256,6 +256,15 @@ let charecters = [
 ]
 
 // #1
+/* Good job getting the work done! However map and foreach would do much better here.
+Also even though js allows you to create a variable without let or const, you should always use let or const.*/
+let names_c1 = charecters.map(function(char) {
+    return char.name
+} 
+
+//or on a single line with an arrow function and implicit return
+let names_c2 = charecters.map(char=>char.name)
+
 names = []
 for (i=0; i<charecters.length; i++){
   names.push(charecters[i].name)
@@ -264,6 +273,17 @@ for (i=0; i<charecters.length; i++){
 console.log(names)
 
 // #2
+//clints
+let character_info = []
+characters.forEach(char => {
+    if (parseInt(char.mass) > 50) {
+        character_info.push({name:char.name, mass:char.mass})
+    }
+}
+//or on one line with ternary and foreach
+character_info = []
+characters.forEach(char => parseInt(char.mass) > 50 ? character_info.push({name:char.name,mass:char.mass}) : false)
+
 Character_info = []
 for (i=0; i<charecters.length; i++){
    topush = []
@@ -275,6 +295,7 @@ for (i=0; i<charecters.length; i++){
 }
 
 console.log(Character_info)
+
 
 // #3
 
