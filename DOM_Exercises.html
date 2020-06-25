@@ -1,0 +1,34 @@
+<html>
+<head>
+
+</head>
+    <body>
+        <h1 id="heading"></h1>
+        <ul id="list">
+        <li id="lettuce" class="green list-item">Lettuce</li>
+        <li id="tomato" class="red list-item">Tomato</li>
+        <li id="cheese" class="yellow list-item">Cheese</li>
+        <li id="burger">Burger</li>
+        </ul>
+
+        <div id = "root"></div>
+        <script>
+            // #1
+            let item = document.getElementById("heading")
+            item.innerHTML = "toppings"
+
+            //#2
+            let element= document.getElementById("burger")
+            element.className += "list-item"
+            
+            //#3
+            let list_item = document.createElement("li")
+            list_item.innerHTML= "Mustard"
+            document.getElementById("list").append(list_item)
+
+            //Large
+
+        </script>
+    </body>
+
+</html>
